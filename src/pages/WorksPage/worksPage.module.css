@@ -1,0 +1,37 @@
+.main {
+    height: 100%;
+    background-color: var(--darkColor);
+}
+
+.textWrapper {
+    margin: 5dvh auto;
+    width: 85%;
+}
+
+.text {
+    font-size: 45px;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .textWrapper {
+        margin: 5dvh auto;
+        width: 90%;
+    }
+
+    .text {
+        font-size: 4.69vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .text {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .text {
+        font-size: 45px;
+    }
+}

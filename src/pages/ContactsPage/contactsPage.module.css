@@ -1,0 +1,164 @@
+.main {
+    background-color: var(--darkColor);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.cicrle {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    right: 32%;
+    border-radius: 100%;
+    fill: #262626;
+    box-shadow:
+        0 4px 70px 0 #8000ff,
+        0 -4px 70px 0 #8000ff;
+    z-index: 1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: white;
+}
+
+.title {
+    font-family: var(--BebasNeue);
+    font-size: 200px;
+    letter-spacing: 0.1em;
+    z-index: 99;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.textTitle {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+@media (max-width: 767px) {
+    .wrapperCicrle {
+        width: 315px;
+        height: 265px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .cicrle {
+        width: 315px;
+        height: 315px;
+        position: absolute;
+        right: 0%;
+        border-radius: 100%;
+        fill: #262626;
+        box-shadow:
+            0 4px 70px 0 #8000ff,
+            0 -4px 70px 0 #8000ff;
+        z-index: 1;
+    }
+
+    .wrapper {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        color: white;
+    }
+
+    .title {
+        font-size: 64px;
+        letter-spacing: 0.1em;
+    }
+
+    .textWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        font-size: 15px;
+    }
+
+    .textTitle {
+        font-size: 20px;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapperCicrle {
+        width: 36.46vw;
+        height: 26.46vw;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .cicrle {
+        width: 36.46vw;
+        height: 36.46vw;
+        position: absolute;
+        right: 0%;
+        border-radius: 100%;
+        fill: #262626;
+        box-shadow:
+            0 4px 70px 0 #8000ff,
+            0 -4px 70px 0 #8000ff;
+        z-index: 1;
+    }
+
+    .wrapper {
+        min-height: 100vh;
+        margin-top: -14dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 3.65vw;
+        color: white;
+    }
+
+    .title {
+        font-size: 10.42vw;
+    }
+
+    .textWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.67vw;
+        gap: 0px;
+    }
+
+    .textTitle {
+        font-size: 2.08vw;
+        margin-bottom: 2.6vw;
+    }
+}

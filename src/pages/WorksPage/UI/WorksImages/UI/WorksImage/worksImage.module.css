@@ -1,0 +1,15 @@
+.imgItem {
+    width: 450px;
+}
+
+@media (max-width: 767px) {
+    .imgItem {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .imgItem {
+        width: 24.74vw;
+    }
+}

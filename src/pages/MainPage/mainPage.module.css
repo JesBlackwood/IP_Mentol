@@ -1,0 +1,279 @@
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: #7508c3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 0.3s;
+    color: white;
+}
+
+.circle {
+    width: 326px;
+    height: 326px;
+    position: absolute;
+    top: 197px;
+    left: 179px;
+    border: 4px solid white;
+    border-radius: 100%;
+    display: block;
+}
+
+.wrapperText {
+    margin: 70px auto;
+    width: 70%;
+    max-height: 60dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cellText {
+    width: 100%;
+    display: flex;
+}
+
+.cellText:nth-child(1) {
+    justify-content: flex-end;
+}
+
+.cellText:nth-child(2) {
+    justify-content: flex-start;
+}
+
+.cellText:nth-child(3) {
+    width: 80%;
+    justify-content: space-between;
+}
+
+.arrowCellText {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descriptionText {
+    font-size: 32px;
+    text-align: center;
+    width: 25dvw;
+    letter-spacing: 0.2em;
+}
+
+.descriptionTextArrow {
+    font-size: 32px;
+    text-align: center;
+    width: 10dvw;
+    letter-spacing: 0.2em;
+}
+
+.descriptionText:nth-child(2) {
+    width: 5dvw;
+}
+
+.nameText {
+    font-size: 200px;
+    font-family: var(--BebasNeue);
+}
+
+.checkWorkBlock {
+    height: 30dvh;
+    width: 18dvw;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.checkWorkBlock.active {
+    padding-left: 5px;
+    background-color: #8000ff;
+}
+
+.checkWorkBlock:hover {
+    background-color: #ab56ff;
+}
+
+.checkWorkBlock > .checkWorkArrow {
+    transition: transform 0.15s ease-in-out;
+}
+
+.checkWorkBlock:hover > .checkWorkArrow {
+    transform: translateX(10px);
+}
+
+.checkWorkLink {
+    margin-bottom: 40px;
+    padding-left: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.checkWorkLink.active {
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .main {
+        top: 0;
+        position: absolute;
+        justify-content: center;
+    }
+    .circle {
+        width: 29vw;
+        height: 29vw;
+        top: 60vw;
+        left: 9vw;
+        border: 2px solid white;
+        display: none;
+    }
+
+    .wrapperText {
+        margin: 0px auto;
+        width: 77%;
+        max-height: 100%;
+    }
+
+    .cellText:nth-child(1) {
+        justify-content: center;
+    }
+
+    .cellText:nth-child(2) {
+        justify-content: center;
+    }
+
+    .cellText:nth-child(3) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .arrowCellText {
+        width: 250px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .descriptionText {
+        font-size: 15px;
+        text-align: center;
+        letter-spacing: 0.2em;
+        width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .nameText {
+        font-size: 64px;
+    }
+
+    .descriptionTextArrow {
+        font-size: 15px;
+        width: 100%;
+        text-align: initial;
+    }
+
+    .imgArrow {
+        width: 30px;
+        transform: rotate(-90deg);
+    }
+
+    .checkWorkBlock {
+        height: 150px;
+        width: 160px;
+        align-items: flex-end;
+    }
+
+    .checkWorkLink {
+        margin-bottom: 40px;
+        padding-left: 15px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .checkWorkArrow {
+        width: 35px;
+        margin-right: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    .circle {
+        width: 16vw;
+        height: 16vw;
+        position: absolute;
+        top: 160px;
+        left: 10%;
+        border: 4px solid white;
+        border-radius: 100%;
+        display: block;
+    }
+
+    .descriptionText {
+        font-size: 1.67vw;
+        text-align: center;
+        width: 25dvw;
+        letter-spacing: 0.2em;
+    }
+
+    .descriptionTextArrow {
+        font-size: 1.67vw;
+        text-align: center;
+        width: 10dvw;
+        letter-spacing: 0.2em;
+    }
+
+    .imgArrow {
+        width: 4.48vw;
+    }
+
+    .nameText {
+        font-size: 10.42vw;
+    }
+
+    .checkWorkBlock {
+        height: 15.63vw;
+        width: 18.23vw;
+    }
+
+    .checkWorkLink {
+        margin-bottom: 2.08vw;
+        padding-left: 2.08vw;
+        font-size: 1.88vw;
+    }
+
+    .checkWorkArrow {
+        width: 4vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .circle {
+        top: 175px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .wrapperText {
+        margin: 150px auto;
+    }
+
+    .circle {
+        top: 275px;
+    }
+}

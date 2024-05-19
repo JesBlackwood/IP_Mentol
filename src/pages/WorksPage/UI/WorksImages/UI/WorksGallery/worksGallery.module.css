@@ -1,0 +1,125 @@
+.main {
+    top: 0;
+    height: 100dvh;
+    width: 100dvw;
+    position: fixed;
+    background-color: var(--darkColor);
+    z-index: 100;
+}
+
+.bar {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    cursor: pointer;
+}
+
+.sliderItem {
+    width: 100%;
+}
+
+.sliderWrapper {
+    width: 280px;
+}
+
+.indexDisplay {
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    .sliderWrapper {
+        position: relative;
+    }
+
+    .sliderWrapper::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.4) 100%);
+        z-index: 5;
+    }
+
+    .sliderItem {
+        margin: 0 auto;
+        width: 280px;
+        height: 345px;
+    }
+
+    .bar {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        top: 5%;
+        left: 80%;
+        cursor: pointer;
+    }
+    
+    .indexDisplay {
+        width: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 5%;
+        left: 20%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .sliderItem  {
+        margin: 0 auto;
+        width: 33.85vw;
+    }
+
+    .sliderWrapper {
+        position: relative;
+    }
+
+    .sliderWrapper::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 101%;
+        height: 102%;
+        background-color: var(--darkColor);
+        z-index: -1;
+    }
+
+    .bar {
+        top: 5%;
+        left: 80%;
+    }
+    
+    .indexDisplay {
+        width: 60px;
+        top: 5%;
+        left: 20%;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,35 @@
+.images {
+    margin: 0 auto 14px auto;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 45px;
+    cursor: pointer;
+}
+
+.images:last-child {
+    margin-bottom: 0;
+    padding-bottom: 200px;
+}
+
+@media (max-width: 767px) {
+    .images {
+        max-width: 100%;
+        gap: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .images {
+        max-width: 80%;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .images {
+        max-width: 80%;
+        gap: 20px;
+    }
+}
