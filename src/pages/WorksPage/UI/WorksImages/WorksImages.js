@@ -1,9 +1,7 @@
-import React, { lazy, Suspense, useState } from "react"
+import React, { useState } from "react"
 import styles from "./worksImages.module.css"
-import WorksLoading from "./UI/WorksLoading/WorksLoading"
 import WorksGallery from "./UI/WorksGallery/WorksGallery"
-
-const WorksImage = lazy(() => import("./UI/WorksImage/WorksImage"))
+import WorksImage from "./UI/WorksImage/WorksImage"
 
 const ImageList = [
     { src: "/img/work1.jpg" },
@@ -37,20 +35,18 @@ const WorksImages = () => {
 
     return (
         <div>
-            <Suspense fallback={<WorksLoading />}>
-                <div className={styles.images}>
-                    {ImageList.map((image, index) => (
-                        <WorksImage
-                            key={index}
-                            pathUrl={image.src}
-                            onClick={() => {
-                                setIsOpen(true);
-                                setSelectedImageIndex(index);
-                            }}
-                        />
-                    ))}
-                </div>
-            </Suspense>
+            <div className={styles.images}>
+                {ImageList.map((image, index) => (
+                    <WorksImage
+                        key={index}
+                        pathUrl={image.src}
+                        onClick={() => {
+                            setIsOpen(true);
+                            setSelectedImageIndex(index);
+                        }}
+                    />
+                ))}
+            </div>
             {isOpen && (
                 <WorksGallery
                     onClick={() => setIsOpen(false)} // Закрываем галерею

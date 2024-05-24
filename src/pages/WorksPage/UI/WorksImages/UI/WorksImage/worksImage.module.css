@@ -2,14 +2,41 @@
     width: 450px;
 }
 
+.imageContainer {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    visibility: hidden;
+    min-height: 200px;
+}
+  
+.imageVisible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.imgPlaceholder, .loading {
+    width: 450px;
+    height: 100%;
+}
+
 @media (max-width: 767px) {
     .imgItem {
         width: 50vw;
+    }
+
+    .imgPlaceholder, .loading {
+        width: 50vw;
+        height: 100%;
     }
 }
 
 @media (min-width: 768px) {
     .imgItem {
         width: 24.74vw;
+    }
+
+    .imgPlaceholder, .loading {
+        width: 24.74vw;
+        height: 100%;
     }
 }

@@ -24,6 +24,7 @@
 
 .img {
     z-index: 10;
+    position: relative;
 }
 
 .text {
@@ -47,6 +48,30 @@
 .textParagraph {
     font-size: 32px;
     font-weight: 500;
+}
+
+.mainNumber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.wrapperNumber {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textNumber {
+    font-size: 10.42vw;
+    font-family: var(--BebasNeue);
+}
+
+.textItem {
+    text-align: center;
+    font-size: 1.67vw;
 }
 
 @media (max-width: 767px) {
@@ -73,6 +98,12 @@
 
     .wrapperTwo {
         flex-direction: column-reverse;
+        overflow: hidden;
+    }
+
+    .imgNumber {
+        width: 340px;
+        margin-left: 100px;
     }
 
     .img {
@@ -88,11 +119,27 @@
         gap: 20px;
     }
 
+    .wrapperTitleTextMobile {
+        position: relative;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
     .titleTextMobile {
         font-family: var(--BebasNeue);
         display: block;
         font-size: 64px;
-        margin-bottom: 50px;
+        animation: appear 2s;
+        text-align: center;
+    }
+
+    @keyframes appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
     }
 
     .titleText {
@@ -102,6 +149,30 @@
     .textParagraph {
         font-size: 15px;
         font-weight: 500;
+    }
+
+    .mainNumber {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .wrapperNumber {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textNumber {
+        font-size: 64px;
+        font-family: var(--BebasNeue);
+    }
+
+    .textItem {
+        text-align: center;
+        font-size: 20px;
     }
 }
 
@@ -141,6 +212,12 @@
 
     .wrapperTwo {
         flex-direction: row;
+        width: auto;
+    }
+
+    .imgNumber {
+        margin-left: 0px;
+        width: 40vw;
     }
 
     .img {
@@ -152,16 +229,53 @@
         display: none;
     }
 
+    .wrapperTitleText {
+        position: relative;
+        width: 100%;
+    }
+
     .titleText {
+        font-family: var(--BebasNeue);
         font-size: 10.42vw;
         display: block;
+        animation: appear 2s;
+        text-align: center;
+    }
+
+    @keyframes appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
     }
 
     .textParagraph {
         font-size: 1.67vw;
     }
-}
 
-@media (min-width: 1440px) {
+    .mainNumber {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
 
+    .wrapperNumber {
+        width: 42%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textNumber {
+        font-size: 10.42vw;
+        font-family: var(--BebasNeue);
+    }
+
+    .textItem {
+        text-align: center;
+        font-size: 1.67vw;
+    }
 }
